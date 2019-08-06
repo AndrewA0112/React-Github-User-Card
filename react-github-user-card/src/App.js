@@ -30,6 +30,7 @@ class App extends React.Component {
     fetchProfile = () => {
         axios.get(`https://api.github.com/users/${this.state.githubHandle}`)
             .then(response => {
+                console.log(response)
                 this.setState({
                     githubProfile: response.data
                 })
